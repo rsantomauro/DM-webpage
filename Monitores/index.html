@@ -1,0 +1,185 @@
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../Imagenes/Emblema.ico">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+
+    <title>Solicitud de Monitores - DeMolay Uruguay</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="../Scripts/bootstrap.css" rel="stylesheet">-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../Scripts/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../Scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../Scripts/carousel.css" rel="stylesheet">
+    <script src="../Scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+       $("#Formulario").submit(function( event ){
+		event.preventDefault();
+
+		$.ajax({
+			type: 'POST',
+			url: 'php/contacto2.php',
+			data: $(this).serialize(),
+			success: function(data){
+				$("#respuesta").slideDown();
+				$("#respuesta").html(data);
+                $('#respuesta2').modal('show');
+                document.getElementById('Formulario').reset();
+			}
+		});
+
+		return false;
+	});
+});
+    </script>
+  </head>
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+  <!-- menu-->
+  <div class="navbar-wrapper">
+  <div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <img class="ImgLogo" src="../Imagenes/LogoWhite.png" width="10%" height="40" />
+
+      <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button>
+      <!--<a class="navbar-brand" href="#">DeMolay Uruguay</a></div>-->
+
+  <div class="navbar-collapse collapse" id="navbar">
+  <ul class="nav navbar-nav">
+  	<li class="active"><a href="../index.html">Inicio</a></li>
+    <li class="dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Informaci&oacute;n General</a>
+  	<ul class="dropdown-menu">
+  		<li><a href="../index.html#about">¿Qu&eacute; es la orden?</a></li>
+  		<li><a href="../index.html#historia">Historia de la Orden</a></li>
+  		<li><a href="../index.html#nombre">¿Porque el nombre?</a></li>
+  		<li><a href="../index.html#religion">DeMolay y la religi&oacute;n</a></li>
+  		<li><a href="../index.html#virtudes">Preceptos y virtudes</a></li>
+  		<li><a href="../index.html#actividades">Actividades</a></li>
+  		<!--<li><a href="#requisitos">Requisitos</a></li>-->
+  	</ul>
+  	<li><a href="../contacto2/index.html#Contactanos">Contactanos</a></li>
+  	<li class="dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Materiales </a>
+  	<ul class="dropdown-menu">
+      <li><a href="../files/Que_es_la_Orden_DeMolay,_Las_Respuestas_a_las_Preguntas_mas_Frecuentes.pdf" target="_blank">Preguntas Frecuentes</a></li>
+  		<li><a href="../files/DeMolayUruguay_ImagenesOficiales.zip">Logos Oficiales</a></li>
+  		<li><a href="index.html#Monitores" target="_blank">Solicitud de Monitores</a></li>
+  	</ul>
+  	</li>
+  	<li class="dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">+</a>
+  	<ul class="dropdown-menu">
+  		<li class="dropdown-header">Lideres</li>
+  		<li class="divider" role="separator"></li>
+  		<li><a href="../oe/index.html">Oficial Ejecutivo</a></li>
+  		<!-- <li><a href="../mcn/index.html">Maestro Consejero Nacional</a></li>-->
+  		<li class="divider" role="separator"></li>
+  		<!--<li class="dropdown-header">Capitulos</li>
+  		<li class="divider" role="separator"></li>
+  		<li><a href="#">Capitulo 01</a></li>
+  		<li><a href="#">Capitulo 02</a></li>
+  		<li><a href="#">Capitulo 03</a></li>
+  		<li class="divider" role="separator"></li>-->
+  		<li class="dropdown-header">Paginas de Interes</li>
+  		<li class="divider" role="separator"></li>
+  		<li><a href="https://demolay.org/" target="_blank">DeMolay International</a></li>
+      <li><a href="https://escribe.demolay.org/login" target="_blank">Escribe</a></li>
+  		<li><a href="https://www.facebook.com/demolayIX/" target="_blank">Region 9</a></li>
+      <li><a href="https://www.masoneriadeluruguay.org/" target="_blank">GLMU</a></li>
+  	</ul>
+  	</li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+  </div>
+  </div>
+  <!-- fin menu-->
+
+<!-- Content -->
+
+<section>
+    <div class="container">
+        <div class="container">
+          <a name="Monitores"></a>
+          <br /> <br /> <br />
+            <h1 align="center" class="lead">Solicitud de Monitores</h1>
+            <a href="#Solicitud"><img class="featurette-image img-responsive center-block imagenCurva" src="../Imagenes/Monitor.jpg" width="30%" height="10%" /></a>
+            <br />
+            <hr>
+        </div>
+        <div class="container">
+            <a name="Solicitud"></a>
+            <form role="form" id="Formulario" action="php/contacto2.php" method="POST">
+                <div class="form-group">
+                    <label class="control-label" for="Nombre">Nombre y apellido</label>
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre y apellido"  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Motivo">Motivo de Contacto</label>
+                    <select name="Motivo" class="form-control">
+                        <option value="Realizar Pedido">Solicitud de Monitores</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="IdDeMolay">Numero Id DeMolay</label>
+                    <input type="text" class="form-control" id="IdDeMolay" name="IdDeMolay" placeholder="Introduzca el nombre de su IdDeMolay" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
+                    <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Mensaje">Mensaje</label>
+                    <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <input type="reset" class="btn btn-default" value="Limpiar">
+                </div>
+                <p align="right">
+                  <a href="../index.html"><button type="button" class="btn btn-primary pull-right">Volver</button></a>
+                </p>
+                <div id="respuesta" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../Scripts/jquery.js"><\/script>')</script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../Scripts/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../Scripts/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
